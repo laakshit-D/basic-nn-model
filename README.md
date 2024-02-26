@@ -28,7 +28,7 @@ Evaluate the model with the testing data.
 ## PROGRAM:
 ```
 #Name: Laakshit D
-R#egister Number: 212222230071
+#Register Number: 212222230071
 ```
 ```
 from google.colab import auth
