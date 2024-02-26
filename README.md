@@ -25,9 +25,10 @@ Plot the performance plot
 ### STEP 7:
 Evaluate the model with the testing data.
 
-## PROGRAM
-### Name: Laakshit D
-### Register Number: 212222230071
+## PROGRAM:
+
+#### Name: Laakshit D
+#### Register Number: 212222230071
 ```
 from google.colab import auth
 import gspread
