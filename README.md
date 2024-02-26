@@ -82,7 +82,7 @@ model=Sequential([Dense(5,activation='relu'),
                   Dense(10,activation='relu'),
                   Dense(1)])
 model.compile(loss="mse",optimizer="rmsprop")
-history=model.fit(Input_train,Output_train, epochs=1000,batch_size=32)
+history=model.fit(Input_train,Output_train, epochs=3000,batch_size=32)
 
 prediction_test=int(input("Enter the value to predict:"))
 preds=model.predict(Scaler.transform([[prediction_test]]))
@@ -91,7 +91,7 @@ print("The prediction for the given input "+str(prediction_test)+" is:"+str(int(
 model.evaluate(Input_test,Output_test)
 
 import matplotlib.pyplot as plt
-plt.suptitle("   Harish Ravishankar")
+plt.suptitle("   Laakshit")
 plt.title("Error VS Iteration")
 plt.ylabel('MSE')
 plt.xlabel('Iteration')
@@ -139,7 +139,7 @@ loss_df.plot()
 
 ## Dataset Information
 
-![image](https://github.com/Harishspice/basic-nn-model/assets/117935868/e3984d1d-5bdf-4ce3-be69-f0d969797aec)
+![image](https://github.com/laakshit-D/basic-nn-model/assets/119559976/1dfbb4aa-4e91-423d-a8de-64b8ec2da879)
 
 ## OUTPUT
 ### Training Loss Vs Iteration Plot
@@ -148,8 +148,9 @@ loss_df.plot()
 
 ### Test Data Root Mean Squared Error
 
-![image](https://github.com/Harishspice/Neural-Regression-Model/assets/117935868/2e3bd2c0-bbc1-44c0-9160-215a25106e1e)
+![image](https://github.com/laakshit-D/basic-nn-model/assets/119559976/dbf68cd8-1401-4577-a02a-9a5925c560c4)
 
 ### New Sample Data Prediction
 
-![image](https://github.com/Harishspice/Neural-Regression-Model/assets/117935868/433ee1d6-6112-4bdb-8e7d-7acf4d2fd526)
+![image](https://github.com/laakshit-D/basic-nn-model/assets/119559976/84b1ec0e-4dde-4e1d-8884-8e39f4bb5917)
+
