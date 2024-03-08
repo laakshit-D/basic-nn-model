@@ -102,13 +102,6 @@ plt.legend(['train'] )
 plt.show()
 ```
 ```
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense
-from google.colab import auth
-import gspread
-from google.auth import default
-```
-```
 worksheet = gc.open('dldata').sheet1
 data = worksheet.get_all_values()
 
