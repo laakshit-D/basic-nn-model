@@ -150,3 +150,5 @@ loss_df.plot()
 
 ![image](https://github.com/laakshit-D/basic-nn-model/assets/119559976/84b1ec0e-4dde-4e1d-8884-8e39f4bb5917)
 
+## RESULT
+Henceforth, a basic neural regression model has been implemented.
