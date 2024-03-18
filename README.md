@@ -7,7 +7,8 @@ To develop a neural network regression model for the given dataset.
 Explain the problem statement
 
 ## Neural Network Model
-Include the neural network model diagram.
+
+![image](https://github.com/Harishspice/Neural-Regression-Model/assets/117935868/3fbfcb22-0844-477e-bc8f-1a56b746704c)
 
 ## DESIGN STEPS
 ### STEP 1:
@@ -30,18 +31,18 @@ Evaluate the model with the testing data.
 #Name: Laakshit D
 #Register Number: 212222230071
 ```
-```
+```python
 from google.colab import auth
 import gspread
 from google.auth import default
 import pandas as pd
 ```
-```
+```python
 auth.authenticate_user()
 creds, _ = default()
 gc = gspread.authorize(creds)
 ```
-```
+```python
 worksheet = gc.open('dldata').sheet1
 rows = worksheet.get_all_values()
 
@@ -50,7 +51,7 @@ df = df.astype({'INPUT':'float'})
 df = df.astype({'OUTPUT':'float'})
 df.head()
 ```
-```
+```python
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
@@ -65,7 +66,7 @@ for i in range(60):
 df=pd.DataFrame({'INPUT': x, 'OUTPUT': y})
 df.head()
 ```
-```
+```python
 inp=df[["INPUT"]].values
 out=df[["OUTPUT"]].values
 Input_train,Input_test,Output_train,Output_test=train_test_split(inp,out,test_size=0.33)
@@ -75,7 +76,7 @@ Scaler.fit(Input_test)
 Input_train=Scaler.transform(Input_train)
 Input_test=Scaler.transform(Input_test)
 ```
-```
+```python
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
@@ -85,7 +86,7 @@ model=Sequential([Dense(5,activation='relu'),
 model.compile(loss="mse",optimizer="rmsprop")
 history=model.fit(Input_train,Output_train, epochs=3000,batch_size=32)
 ```
-```
+```python
 prediction_test=int(input("Enter the value to predict:"))
 preds=model.predict(Scaler.transform([[prediction_test]]))
 print("The prediction for the given input "+str(prediction_test)+" is:"+str(int(np.round(preds))))
@@ -101,7 +102,7 @@ plt.plot(pd.DataFrame(history.history))
 plt.legend(['train'] )
 plt.show()
 ```
-```
+```python
 worksheet = gc.open('dldata').sheet1
 data = worksheet.get_all_values()
 
@@ -111,7 +112,7 @@ dataset1 = dataset1.astype({'OUTPUT':'float'})
 
 dataset1.head()
 ```
-```
+```python
 X = dataset1[['INPUT']].values
 y = dataset1[['OUTPUT']].values
 
@@ -120,7 +121,7 @@ Scaler = MinMaxScaler()
 Scaler.fit(X_train)
 X_train1 = Scaler.transform(X_train)
 ```
-```
+```python
 ai_brain = Sequential([
     Dense(3,activation='relu'),
     Dense(4,activation='relu'),
