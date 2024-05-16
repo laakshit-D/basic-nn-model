@@ -4,7 +4,7 @@
 To develop a neural network regression model for the given dataset.
 
 ## THEORY:
-Explain the problem statement
+Neural network regression models learn complex relationships between input variables and continuous outputs through interconnected layers of neurons. By iteratively adjusting parameters via forward and backpropagation, they minimize prediction errors. Their effectiveness hinges on architecture design, regularization, and hyperparameter tuning to prevent overfitting and optimize performance.
 
 ## Neural Network Model
 
